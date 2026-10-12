@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Friendly Beginner Web Projects</title>
+  </head>
+
+  <body>
+    <!-- Loading -->
+
+    <div class="loader-screen">
+      <div class="loader-content">
+        <div class="loader-logo">
+          <span>BS</span>
+        </div>
+
+        <h1>Loading...</h1>
+
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+
+        <p class="loading-text">Preparing your projects...</p>
+
+        <span class="percentage">0%</span>
+      </div>
+    </div>
+
+    <!-- Welcome message -->
+
+    <main class="main-content">
+      <div class="content-card">
+        <h1>Welcome</h1>
+
+        <p>Friendly Beginner Web Projects are ready for you.</p>
+        <p>
+          Each project is designed to help you practice core front-end skills,
+          build confidence, and enjoy learning by doing.
+        </p>
+
+        <button class="continue-btn">Start Projects</button>
+      </div>
+
+      <!-- Project menu -->
+
+      <div class="projects-card">
+        <div class="projects-header">
+          <div>
+            <h2>BlankStyxx Projects</h2>
+
+            <p>Select a project to open</p>
+          </div>
+
+          <button class="back-btn">Back</button>
+        </div>
+
+        <div class="project-tools">
+          <input
+            class="project-search"
+            type="search"
+            placeholder="Find a project"
+            aria-label="Search projects"
+          />
+          <select
+            class="project-category"
+            aria-label="Filter projects by category"
+          >
+            <option value="all">All categories</option>
+            <option value="game">Games</option>
+            <option value="tools">Tools</option>
+            <option value="productivity">Productivity</option>
+            <option value="learning">Learning</option>
+          </select>
+          <button type="button" class="launcher-theme">Light theme</button>
+        </div>
+
+        <div class="projects-list">
+          <!-- Rock Paper Scissors -->
+          <a
+            href="./R_P_S/index.html"
+            class="project-link"
+            data-category="game"
+          >
+            <span class="project-thumb thumb-game" aria-hidden="true">✊</span>
+            <span class="project-number">01</span>
+
+            <span class="project-info">
+              <strong>Rock Paper Scissors</strong>
+              <small
+                >Set a match length, choose your move, and track the
+                score.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+
+          <!-- Rock Paper Scissors -->
+          <a
+            href="./Quiz/index.html"
+            class="project-link"
+            data-category="learning"
+          >
+            <span class="project-thumb thumb-quiz" aria-hidden="true">?</span>
+            <span class="project-number">07</span>
+
+            <span class="project-info">
+              <strong>Quiz</strong>
+              <small
+                >Answer multiple-choice questions and see your final
+                score.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+
+          <!-- Calculator -->
+          <a
+            href="./calculator/index.html"
+            class="project-link"
+            data-category="tools"
+          >
+            <span class="project-thumb thumb-calculator" aria-hidden="true"
+              >+</span
+            >
+            <span class="project-number">02</span>
+
+            <span class="project-info">
+              <strong>Calculator</strong>
+              <small
+                >Work through arithmetic and scientific calculations.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+
+          <!-- To-Do List -->
+          <a
+            href="./To-Do/index.html"
+            class="project-link"
+            data-category="productivity"
+          >
+            <span class="project-thumb thumb-tasks" aria-hidden="true">✓</span>
+            <span class="project-number">03</span>
+
+            <span class="project-info">
+              <strong>To-Do List</strong>
+              <small
+                >Organize tasks by status, category, priority, and due
+                date.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+
+          <!-- Stopwatch -->
+          <a
+            href="./Stopwatch/index.html"
+            class="project-link"
+            data-category="tools"
+          >
+            <span class="project-thumb thumb-time" aria-hidden="true">◷</span>
+            <span class="project-number">04</span>
+
+            <span class="project-info">
+              <strong>Stopwatch</strong>
+              <small
+                >Record laps or run several countdown timers
+                independently.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+
+          <!-- Password Generator -->
+          <a
+            href="./Password-Generator/index.html"
+            class="project-link"
+            data-category="tools"
+          >
+            <span class="project-thumb thumb-password" aria-hidden="true"
+              >⌑</span
+            >
+            <span class="project-number">05</span>
+
+            <span class="project-info">
+              <strong>Password Generator</strong>
+              <small
+                >Build custom passwords with secure randomness and strength
+                feedback.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+
+          <!-- Note App -->
+          <a
+            href="./Note-App/index.html"
+            class="project-link"
+            data-category="productivity"
+          >
+            <span class="project-thumb thumb-notes" aria-hidden="true">▤</span>
+            <span class="project-number">06</span>
+
+            <span class="project-info">
+              <strong>Note App</strong>
+              <small
+                >Keep searchable, categorized notes with Markdown and
+                pinning.</small
+              >
+            </span>
+
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

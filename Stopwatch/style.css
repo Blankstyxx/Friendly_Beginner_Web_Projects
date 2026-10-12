@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #080b12;
+  --surface: #111722;
+  --surface-2: #171e2b;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --primary: #8b5cf6;
+  --primary-dark: #6d28d9;
+
+  --success: #22c55e;
+  --success-dark: #15803d;
+
+  --danger: #ef4444;
+  --danger-dark: #b91c1c;
+
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(139, 92, 246, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(59, 130, 246, 0.08),
+      transparent 35%
+    ),
+    var(--bg);
+}
+
+.stopwatch {
+  width: 100%;
+  max-width: 560px;
+  padding: 35px;
+  text-align: center;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
+    ),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: clamp(34px, 7vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  background-clip: text;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 30px;
+  padding: 30px 20px;
+  background: #080b12;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.hours,
+.minutes,
+.seconds {
+  min-width: 2ch;
+  font-size: clamp(45px, 10vw, 70px);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.display > span:nth-child(even) {
+  color: var(--primary);
+  font-size: clamp(38px, 8vw, 58px);
+  font-weight: 700;
+  margin: 0 3px;
+}
+
+.milliseconds {
+  margin-left: 4px;
+  color: var(--text-muted);
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 600;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.laps-panel,
+.countdown-panel {
+  margin-top: 24px;
+  text-align: left;
+}
+.laps-panel h2,
+.countdown-panel h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.lap-list {
+  max-height: 150px;
+  overflow: auto;
+  padding-left: 24px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.9;
+}
+.timer-form {
+  display: grid;
+  grid-template-columns: 1fr 110px auto;
+  gap: 8px;
+}
+.timer-form input,
+.timer-form button,
+.timer-list button {
+  min-width: 0;
+  padding: 10px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.timer-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  list-style: none;
+}
+.timer-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  background: var(--surface-2);
+  border-radius: 9px;
+}
+.timer-list li span {
+  flex: 1;
+  font-variant-numeric: tabular-nums;
+}
+.timer-list button {
+  min-height: 0;
+  font-size: 12px;
+}
+
+button {
+  padding: 15px 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.start-btn {
+  background: linear-gradient(135deg, var(--success), var(--success-dark));
+
+  box-shadow: 0 8px 22px rgba(34, 197, 94, 0.18);
+}
+
+.pause-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.18);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+
+  box-shadow: 0 8px 22px rgba(239, 68, 68, 0.18);
+}
+
+/* phone */
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  .stopwatch {
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  h1 {
+    margin-bottom: 22px;
+
+    font-size: 38px;
+  }
+
+  .display {
+    padding: 25px 10px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  button {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .timer-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .timer-form .timer-name {
+    grid-column: 1 / -1;
+  }
+  .timer-list li {
+    flex-wrap: wrap;
+  }
+}
+
+/* small phone */
+@media (max-width: 380px) {
+  .stopwatch {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .display {
+    padding: 22px 5px;
+  }
+
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 40px;
+  }
+
+  .milliseconds {
+    font-size: 20px;
+  }
+}

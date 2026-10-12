@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Password Generator</title>
+  </head>
+
+  <body>
+    <main class="password-container">
+      <h1>Password Generator</h1>
+
+      <p class="description">Create a strong and secure password</p>
+
+      <!-- Password display -->
+      <div class="password-display">
+        <input
+          type="text"
+          class="password"
+          placeholder="Your password"
+          readonly
+        />
+
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="strength-row">
+        <span>Password strength</span>
+        <strong class="strength-label">Not generated</strong>
+      </div>
+      <div class="strength-track"><span class="strength-meter"></span></div>
+
+      <!-- Settings -->
+      <div class="settings">
+        <!-- Password length -->
+        <div class="setting length-setting">
+          <div class="setting-header">
+            <label for="length"> Password Length </label>
+
+            <span class="length-value">16</span>
+          </div>
+
+          <input
+            type="range"
+            id="length"
+            class="length"
+            min="4"
+            max="50"
+            value="16"
+          />
+        </div>
+
+        <!-- Options -->
+        <label class="option">
+          <input type="checkbox" class="uppercase" checked />
+
+          <span>Include Uppercase</span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" class="lowercase" checked />
+
+          <span>Include Lowercase</span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" class="numbers" checked />
+
+          <span>Include Numbers</span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" class="symbols" checked />
+
+          <span>Include Symbols</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" class="exclude-similar" />
+          <span>Exclude similar characters (i, l, 1, L, o, 0, O)</span>
+        </label>
+        <label class="custom-set">
+          Custom characters
+          <input
+            class="custom-characters"
+            type="text"
+            maxlength="80"
+            placeholder="Add extra characters"
+          />
+        </label>
+      </div>
+
+      <!-- Generate -->
+      <button class="generate-btn">Generate Password</button>
+
+      <!-- Message -->
+      <p class="message"></p>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

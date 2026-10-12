@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <main class="todo-container">
+      <header class="todo-header">
+        <h1>To-Do List</h1>
+        <p class="subtitle">Stay organized and get things done.</p>
+      </header>
+
+      <form class="todo-form">
+        <input
+          type="text"
+          class="todo-input"
+          placeholder="What do you need to do?"
+          aria-label="Enter a new task"
+          autocomplete="off"
+        />
+
+        <select class="task-category" aria-label="Task category">
+          <option>Personal</option>
+          <option>Work</option>
+          <option>Learning</option>
+          <option>Health</option>
+          <option>Other</option>
+        </select>
+        <input class="task-due" type="date" aria-label="Due date" />
+        <select class="task-priority" aria-label="Task priority">
+          <option value="normal">Normal</option>
+          <option value="high">High</option>
+          <option value="low">Low</option>
+        </select>
+
+        <button type="submit" class="add-btn">Add Task</button>
+      </form>
+
+      <div class="task-search-row">
+        <input
+          type="search"
+          class="task-search"
+          placeholder="Search tasks"
+          aria-label="Search tasks"
+        />
+        <select class="category-filter" aria-label="Filter by category">
+          <option value="all">Every category</option>
+          <option>Personal</option>
+          <option>Work</option>
+          <option>Learning</option>
+          <option>Health</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="todo-filters">
+        <button type="button" class="filter-btn active" data-filter="all">
+          All
+        </button>
+
+        <button type="button" class="filter-btn" data-filter="active">
+          Active
+        </button>
+
+        <button type="button" class="filter-btn" data-filter="completed">
+          Completed
+        </button>
+      </div>
+
+      <ul class="todo-list"></ul>
+
+      <p class="empty-message">No tasks yet. Add your first task!</p>
+
+      <div class="todo-footer">
+        <span>
+          Tasks:
+          <strong class="task-count">0</strong>
+        </span>
+
+        <span>
+          Completed:
+          <strong class="completed-count">0</strong>
+        </span>
+
+        <button type="button" class="clear-btn">Clear All</button>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Note App</title>
+  </head>
+
+  <body>
+    <main class="notes-container">
+      <h1>Note App</h1>
+
+      <p class="description">Write down your thoughts and ideas</p>
+
+      <div class="note-tools">
+        <input
+          type="search"
+          class="note-search"
+          placeholder="Search notes"
+          aria-label="Search notes"
+        />
+        <select
+          class="note-category-filter"
+          aria-label="Filter notes by category"
+        >
+          <option value="all">Every category</option>
+          <option>Personal</option>
+          <option>Work</option>
+          <option>Ideas</option>
+          <option>Learning</option>
+        </select>
+        <button type="button" class="note-theme-toggle">Light theme</button>
+      </div>
+
+      <!-- Note form -->
+      <form class="note-form">
+        <input
+          type="text"
+          class="note-title"
+          placeholder="Note title..."
+          maxlength="80"
+          autocomplete="off"
+        />
+
+        <textarea
+          class="note-content"
+          placeholder="Write your note here..."
+          rows="5"
+          maxlength="1000"
+        ></textarea>
+
+        <select class="note-category" aria-label="Note category">
+          <option>Personal</option>
+          <option>Work</option>
+          <option>Ideas</option>
+          <option>Learning</option>
+        </select>
+        <label class="markdown-setting"
+          ><input class="markdown-enabled" type="checkbox" checked /> Render
+          basic Markdown</label
+        >
+
+        <button type="submit" class="add-note-btn">Add Note</button>
+      </form>
+
+      <!-- Notes -->
+      <section class="notes-list"></section>
+
+      <!-- Empty message -->
+      <p class="empty-message">No notes yet. Create your first note!</p>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

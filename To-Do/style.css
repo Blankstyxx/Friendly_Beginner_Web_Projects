@@ -1,0 +1,599 @@
+/* ==============================
+RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+VARIABLES
+================================ */
+
+:root {
+  --bg: #080b12;
+
+  --surface: #111722;
+  --surface-2: #171e2b;
+  --surface-3: #1d2635;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --primary: #8b5cf6;
+  --primary-dark: #6d28d9;
+
+  --danger: #ef4444;
+  --success: #22c55e;
+
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ==============================
+BODY
+================================ */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 60px 20px;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(139, 92, 246, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(59, 130, 246, 0.08),
+      transparent 35%
+    ),
+    var(--bg);
+}
+
+/* ==============================
+MAIN CONTAINER
+================================ */
+
+.todo-container {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
+    ),
+    var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+}
+
+/* ==============================
+HEADER
+================================ */
+
+.todo-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+h1 {
+  margin-bottom: 8px;
+
+  font-size: clamp(34px, 7vw, 48px);
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==============================
+FORM
+================================ */
+
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.task-category,
+.task-due,
+.task-priority,
+.category-filter,
+.task-search {
+  min-width: 0;
+  padding: 12px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.todo-form .todo-input {
+  flex: 1 1 220px;
+}
+.todo-form .task-category,
+.todo-form .task-due,
+.todo-form .task-priority {
+  flex: 1 1 120px;
+}
+.task-search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.task-search {
+  flex: 1;
+}
+
+.todo-input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 15px 16px;
+
+  color: var(--text);
+  background: var(--surface-2);
+
+  border: 1px solid var(--border);
+  border-radius: 13px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.todo-input:focus {
+  border-color: rgba(139, 92, 246, 0.7);
+
+  background: var(--surface-3);
+
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+.todo-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ==============================
+ADD BUTTON
+================================ */
+
+.add-btn {
+  padding: 15px 22px;
+
+  color: white;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border: none;
+  border-radius: 13px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.1);
+
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.3);
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+
+/* ==============================
+FILTERS
+================================ */
+
+.todo-filters {
+  display: flex;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  padding: 5px;
+
+  background: var(--surface-2);
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+}
+
+.filter-btn {
+  flex: 1;
+
+  padding: 9px 12px;
+
+  color: var(--text-muted);
+
+  background: transparent;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+}
+
+.filter-btn.active {
+  color: white;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+/* ==============================
+TASK LIST
+================================ */
+
+.todo-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  list-style: none;
+}
+
+/* ==============================
+TASK ITEM
+================================ */
+
+.todo-item {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  background: var(--surface-2);
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.task-details {
+  flex-basis: calc(100% - 38px);
+  margin-left: 32px;
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: capitalize;
+}
+.todo-item.priority-high {
+  border-left: 3px solid #ef6b59;
+}
+.todo-item.priority-low {
+  border-left: 3px solid #5aa6a0;
+}
+.todo-item.dragging {
+  opacity: 0.45;
+}
+.todo-item[draggable="true"] {
+  cursor: grab;
+}
+
+.todo-item:hover {
+  background: var(--surface-3);
+
+  border-color: rgba(139, 92, 246, 0.25);
+
+  transform: translateY(-2px);
+}
+
+/* ==============================
+CHECKBOX
+================================ */
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  accent-color: var(--primary);
+
+  cursor: pointer;
+}
+
+/* ==============================
+TASK TEXT
+================================ */
+
+.todo-text {
+  flex: 1;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+.todo-item.completed .todo-text {
+  color: var(--text-muted);
+
+  text-decoration: line-through;
+}
+
+/* ==============================
+DELETE BUTTON
+================================ */
+
+.delete-btn {
+  flex-shrink: 0;
+
+  padding: 8px 11px;
+
+  color: #fca5a5;
+
+  background: rgba(239, 68, 68, 0.1);
+
+  border: 1px solid rgba(239, 68, 68, 0.15);
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: white;
+
+  background: var(--danger);
+
+  transform: scale(1.05);
+}
+
+/* ==============================
+EMPTY MESSAGE
+================================ */
+
+.empty-message {
+  padding: 30px 15px;
+
+  color: var(--text-muted);
+
+  text-align: center;
+
+  font-size: 15px;
+}
+
+/* ==============================
+FOOTER
+================================ */
+
+.todo-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+  padding-top: 18px;
+
+  color: var(--text-muted);
+
+  border-top: 1px solid var(--border);
+
+  font-size: 13px;
+}
+
+.todo-footer strong {
+  color: var(--text);
+}
+
+@media (max-width: 520px) {
+  .task-search-row {
+    flex-direction: column;
+  }
+  .todo-form .add-btn {
+    flex: 1 1 100%;
+  }
+  .task-details {
+    order: 3;
+  }
+}
+
+/* ==============================
+CLEAR BUTTON
+================================ */
+
+.clear-btn {
+  padding: 8px 12px;
+
+  color: var(--text-muted);
+
+  background: transparent;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.clear-btn:hover {
+  color: white;
+
+  background: var(--surface-3);
+
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+/* ==============================
+PHONE
+================================ */
+
+@media (max-width: 600px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  .todo-container {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .todo-form {
+    flex-direction: column;
+  }
+
+  .todo-input,
+  .add-btn {
+    width: 100%;
+  }
+
+  .add-btn {
+    padding: 14px;
+  }
+
+  .todo-footer {
+    flex-wrap: wrap;
+  }
+}
+
+/* ==============================
+SMALL PHONE
+================================ */
+
+@media (max-width: 380px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .todo-container {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .todo-item {
+    padding: 12px;
+  }
+
+  .todo-text {
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  .filter-btn {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+
+  .todo-footer {
+    font-size: 12px;
+  }
+}

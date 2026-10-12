@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissor</h1>
+
+    <!-- playing board -->
+    <div class="playingBoard">
+      <!-- Greetings -->
+      <p class="round-status">Choose your settings and play a round.</p>
+
+      <div class="game-settings">
+        <label
+          >Opponent
+          <select class="game-mode">
+            <option value="computer">Computer</option>
+            <option value="local">Local two-player</option>
+          </select>
+        </label>
+        <label
+          >Difficulty
+          <select class="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <label
+          >Match
+          <select class="round-limit">
+            <option value="1">One round</option>
+            <option value="3" selected>Best of 3</option>
+            <option value="5">Best of 5</option>
+          </select>
+        </label>
+        <label class="sound-setting"
+          ><input class="sound-toggle" type="checkbox" checked /> Sound</label
+        >
+      </div>
+
+      <!-- choice -->
+      <div class="choices">
+        <p>Player: <span class="playerChoice">0</span></p>
+        <p>Computer: <span class="pcChoice">0</span></p>
+      </div>
+
+      <!--opting buttons -->
+      <div class="options">
+        <button>Rock</button>
+        <button>Paper</button>
+        <button>Scissor</button>
+      </div>
+
+      <!-- scores -->
+      <div class="scores">
+        <table>
+          <tr>
+            <th>Player</th>
+            <th class="opponent-label">Computer</th>
+          </tr>
+          <tr>
+            <td class="playerScore">0</td>
+            <td class="pcScore">0</td>
+          </tr>
+        </table>
+
+        <!-- message -->
+        <p class="msg"></p>
+      </div>
+      <div class="match-footer">
+        <button type="button" class="new-match">New match</button>
+        <section class="history-panel" aria-live="polite">
+          <h2>Recent rounds</h2>
+          <ol class="game-history"></ol>
+        </section>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

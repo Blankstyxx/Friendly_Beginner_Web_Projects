@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Stopwatch</title>
+  </head>
+
+  <body>
+    <main class="stopwatch">
+      <h1>Stopwatch</h1>
+
+      <!-- Display -->
+      <div class="display">
+        <span class="hours">00</span>
+        <span>:</span>
+        <span class="minutes">00</span>
+        <span>:</span>
+        <span class="seconds">00</span>
+        <span class="milliseconds">.00</span>
+      </div>
+
+      <!-- Control buttons-->
+      <div class="controls">
+        <button class="start-btn">Start</button>
+        <button class="pause-btn">Pause</button>
+        <button class="reset-btn">Reset</button>
+        <button class="lap-btn">Lap</button>
+      </div>
+      <section class="laps-panel">
+        <h2>Laps</h2>
+        <ol class="lap-list" aria-live="polite"></ol>
+      </section>
+      <section class="countdown-panel">
+        <h2>Countdown timers</h2>
+        <form class="timer-form">
+          <input
+            class="timer-name"
+            type="text"
+            placeholder="Timer name"
+            maxlength="30"
+            aria-label="Timer name"
+          />
+          <input
+            class="timer-duration"
+            type="number"
+            min="1"
+            max="86400"
+            value="60"
+            aria-label="Duration in seconds"
+          />
+          <button type="submit">Add timer</button>
+        </form>
+        <ul class="timer-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

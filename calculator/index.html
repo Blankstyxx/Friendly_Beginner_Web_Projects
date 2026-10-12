@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <main class="calculator">
+      <h1>Calculator</h1>
+      <div class="calculator-tools">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch color theme"
+          title="Switch color theme"
+        >
+          Light theme
+        </button>
+      </div>
+
+      <!-- Display -->
+      <div class="display">
+        <div class="previous-operand"></div>
+        <div class="current-operand">0</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button class="clear">AC</button>
+        <button class="delete">DEL</button>
+        <button class="percent">%</button>
+        <button class="operator">÷</button>
+
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">×</button>
+
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">−</button>
+
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator">+</button>
+
+        <button class="number zero">0</button>
+        <button class="number">.</button>
+        <button class="equals">=</button>
+      </div>
+
+      <section class="scientific-buttons" aria-label="Scientific functions">
+        <button type="button" data-function="sin">sin</button>
+        <button type="button" data-function="cos">cos</button>
+        <button type="button" data-function="tan">tan</button>
+        <button type="button" data-function="sqrt">√</button>
+        <button type="button" data-function="square">x²</button>
+      </section>
+
+      <section class="history-panel">
+        <h2>History</h2>
+        <ol class="calculation-history" aria-live="polite"></ol>
+        <button type="button" class="clear-history">Clear history</button>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
