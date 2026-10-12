@@ -2,13 +2,18 @@
 
 A collection of beginner-friendly browser projects built with HTML, CSS, and JavaScript. The repository is designed for practice, experimentation, and hands-on learning in front-end development.
 
+<p align="center"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"> <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"> </p>
+
+<p align="center"> <a href="https://blankstyxx.github.io/Friendly_Beginner_Web_Projects/"> <img src="https://img.shields.io/badge/🌐VIEW LIVE DEMO-00C853?style=for-the-badge" alt="View Live Demo"> </a> <a href="https://github.com/Blankstyxx/Friendly_Beginner_Web_Projects"> <img src="https://img.shields.io/badge/VIEWSOURCE_CODE-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Source Code"> </a> </p>
+
 ## Highlights
 
 - 7 small interactive projects
 - No framework or build step required
-- Pure browser-based JavaScript
+- Pure browser-based HTML, CSS & JavaScript
 - Beginner-focused UI and learning flow
 - Responsive design and local browser storage
+
 
 ## Included projects
 
@@ -37,6 +42,10 @@ cd Friendly_Beginner_Web_Projects
 ```bash
 python3 -m http.server 8000
 ```
+  or
+
+use `Live server` extension on VS code
+
 
 3. Open the app in your browser:
 
@@ -91,9 +100,9 @@ Pull requests and improvements are welcome. If you want to add a new project, im
 
 This project is currently provided for learning and personal development without a formal license file. If you plan to reuse or redistribute it publicly, consider adding a proper open-source license.
 
-## BlankStyxx
+## Author 👨‍💻 
+BlankStyxx
 
-A collection of frontend projects built while learning, experimenting with, and practicing HTML, CSS, and JavaScript.
 
 ---
 
@@ -121,6 +130,8 @@ It's about building things, breaking things, fixing them, and trying again.
 
 Every project in this collection is a small step toward becoming a better developer.
 
-> **Learn by building. Build by experimenting. Improve by never stopping. 🚀**
+> **Learn by building, Build by experimenting, Improve by never stopping. 🚀**
 
 If you find this repository useful, consider giving it a ⭐ to support the project!
+
+<p align="center"> Made with ❤️ and JavaScript by <strong>BlankStyxx</strong> </p>
