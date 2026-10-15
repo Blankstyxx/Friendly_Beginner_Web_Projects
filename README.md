@@ -37,23 +37,15 @@ git clone https://github.com/Blankstyxx/Friendly_Beginner_Web_Projects.git
 cd Friendly_Beginner_Web_Projects
 ```
 
-2. Start a local web server:
+2. Run the web applications:
 
-```bash
-python3 -m http.server 8000
-```
-  or
+Run the `index.html` file located in the root directory on your browser 
+
+or
 
 use `Live server` extension on VS code
 
 
-3. Open the app in your browser:
-
-```text
-http://localhost:8000
-```
-
-You can also open the landing page directly from `index.html`, but a local server is recommended for features such as clipboard access and browser APIs.
 
 ## Project structure
 
@@ -101,7 +93,7 @@ Pull requests and improvements are welcome. If you want to add a new project, im
 This project is currently provided for learning and personal development without a formal license file. If you plan to reuse or redistribute it publicly, consider adding a proper open-source license.
 
 ## Author 👨‍💻 
-BlankStyxx
+BlankStyxx(Styxx)
 
 
 ---
@@ -134,4 +126,4 @@ Every project in this collection is a small step toward becoming a better develo
 
 If you find this repository useful, consider giving it a ⭐ to support the project!
 
-<p align="center"> Made with ❤️ and JavaScript by <strong>BlankStyxx</strong> </p>
+<p align="center"> Made with ❤️ and JavaScript by <strong>BlankStyxx(Styxx)</strong> </p>
